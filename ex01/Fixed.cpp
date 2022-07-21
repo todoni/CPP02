@@ -16,7 +16,6 @@ Fixed::Fixed(const float f)
 	:value(roundf(f * (1 << this->fractionalBit)))
 {
 	std::cout << "Float constructor called." << std::endl;
-	
 }
 
 Fixed::Fixed(const Fixed& ref)
@@ -41,7 +40,7 @@ void	Fixed::setRawBits(const int raw)
 
 float	Fixed::toFloat(void) const
 {
-	return (float(this->value) / (1 << this->fractionalBit));
+	return (float(this->value) / float(1 << this->fractionalBit));
 }
 
 int	Fixed::toInt(void) const

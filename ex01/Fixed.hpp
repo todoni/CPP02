@@ -8,7 +8,7 @@ class	Fixed
 {
 	private:
 		int					value;
-		static const int	fractionalBit = 8;
+		static const int	fractionalBit = 16;
 	
 	public:
 		Fixed(void);
@@ -26,6 +26,6 @@ class	Fixed
 		int		toInt(void) const;
 };
 
-std::ostream& operator<<(std::ostream& out, const Fixed& ref); // 이거 왜 밖에 빼야 되는지?
+std::ostream& operator<<(std::ostream& out, const Fixed& ref);
 
 #endif
