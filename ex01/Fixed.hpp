@@ -8,7 +8,7 @@ class	Fixed
 {
 	private:
 		int					value;
-		static const int	fractionalBit = 16;
+		static const int	fractionalBit = 8;
 	
 	public:
 		Fixed(void);
@@ -22,7 +22,7 @@ class	Fixed
 		int		getRawBits(void) const;
 		void	setRawBits(int const raw);
 
-		float	toFloat(void) const;
+		double	toFloat(void) const;
 		int		toInt(void) const;
 };
 
